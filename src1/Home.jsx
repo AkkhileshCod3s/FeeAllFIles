@@ -1,4 +1,4 @@
-import imgUrl from "./images/harry.jpg";
+import imgUrl from "./images/bg.png";
 import { useNavigate } from "react-router-dom";
 
 export default function Home() {
@@ -9,14 +9,24 @@ export default function Home() {
     }
 
     return (
-        <div className="hf bgi" style={{ backgroundImage: `url(${imgUrl})` }}>
+        <div
+            className="hf bgi"
+            style={{
+                backgroundImage: `url(${imgUrl})`,
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+                backgroundRepeat: "no-repeat",
+                width: "100vw",
+                height: "100vh",
+            }}
+        >
             <nav className="fxc p1">
                 <button
-                onClick={login}
-                className="bg20 b1 fsm px2 sh2"
-                style={{ color: "silver" }}
+                    onClick={login}
+                    className="bg20 b1 fsm px2 sh2"
+                    style={{ color: "silver" }}
                 >
-                Login
+                    Login
                 </button>
             </nav>
         </div>
